@@ -108,7 +108,7 @@ const CharacterInformationCard = ({ character, onSave }) => {
                   <input
                     name="wand"
                     data-wand-prop="wood"
-                    value={editedCharacter.wand.wood || ''}
+                    value={editedCharacter.wand?.wood || ''}
                     onChange={handleChange}
                     className="w-full"
                   />
@@ -118,7 +118,7 @@ const CharacterInformationCard = ({ character, onSave }) => {
                   <input
                     name="wand"
                     data-wand-prop="core"
-                    value={editedCharacter.wand.core || ''}
+                    value={editedCharacter.wand?.core || ''}
                     onChange={handleChange}
                     className="w-full"
                   />
@@ -128,7 +128,7 @@ const CharacterInformationCard = ({ character, onSave }) => {
                   <input
                     name="wand"
                     data-wand-prop="length"
-                    value={editedCharacter.wand.length || ''}
+                    value={editedCharacter.wand?.length || ''}
                     onChange={handleChange}
                     className="w-full"
                   />
@@ -162,9 +162,9 @@ const CharacterInformationCard = ({ character, onSave }) => {
               <div className="mb-4">
                 <h3 className="font-bold mb-2">Wand:</h3>
                 <ul className="list-disc list-inside pl-4">
-                  <li>Wood: {character.wand.wood || ''}</li>
-                  <li>Core: {character.wand.core || ''}</li>
-                  <li>Length: {character.wand.length || ''}</li>
+                  <li>Wood: {character.wand?.wood || ''}</li>
+                  <li>Core: {character.wand?.core || ''}</li>
+                  <li>Length: {character.wand?.length || ''}</li>
                 </ul>
               </div>
             </>
