@@ -162,9 +162,9 @@ const CharacterInformationCard = ({ character, onSave }) => {
               <div className="mb-4">
                 <h3 className="font-bold mb-2">Wand:</h3>
                 <ul className="list-disc list-inside pl-4">
-                  <li>Wood: {character.wand.wood}</li>
-                  <li>Core: {character.wand.core}</li>
-                  <li>Length: {character.wand.length}</li>
+                  <li>Wood: {character.wand.wood || ''}</li>
+                  <li>Core: {character.wand.core || ''}</li>
+                  <li>Length: {character.wand.length || ''}</li>
                 </ul>
               </div>
             </>
