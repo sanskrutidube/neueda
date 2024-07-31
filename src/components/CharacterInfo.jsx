@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getCharacterById } from '../services/data';
+import { getCharacterById, updateCharacter } from '../services/data';
 import CharacterInformationCard from './CharacterInformationCard';
 import NotFound from './NotFound';
 
@@ -47,7 +47,7 @@ const CharacterInfo = () => {
   }
 
   const saveCharacter = async (editedCharacter) => {
-    console.log(editedCharacter);
+    await updateCharacter(editedCharacter);
   };
 
   return (
