@@ -1,4 +1,4 @@
-const BASE_URI = 'http://localhost:3000/api';
+const BASE_URI = import.meta.env.VITE_BASE_URI;
 
 const getAllCharacters = async (endpoint, signal) => {
   try {
