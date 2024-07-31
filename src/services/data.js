@@ -86,6 +86,9 @@ const updateCharacter = async (payload, signal) => {
   try {
     const response = await fetch(`${BASE_URI}/characters`, {
       method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify(payload),
       signal,
     });
