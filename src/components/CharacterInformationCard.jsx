@@ -108,7 +108,7 @@ const CharacterInformationCard = ({ character, onSave }) => {
                   <input
                     name="wand"
                     data-wand-prop="wood"
-                    value={editedCharacter.wand.wood}
+                    value={editedCharacter.wand.wood || ''}
                     onChange={handleChange}
                     className="w-full"
                   />
@@ -118,7 +118,7 @@ const CharacterInformationCard = ({ character, onSave }) => {
                   <input
                     name="wand"
                     data-wand-prop="core"
-                    value={editedCharacter.wand.core}
+                    value={editedCharacter.wand.core || ''}
                     onChange={handleChange}
                     className="w-full"
                   />
@@ -128,7 +128,7 @@ const CharacterInformationCard = ({ character, onSave }) => {
                   <input
                     name="wand"
                     data-wand-prop="length"
-                    value={editedCharacter.wand.length}
+                    value={editedCharacter.wand.length || ''}
                     onChange={handleChange}
                     className="w-full"
                   />
