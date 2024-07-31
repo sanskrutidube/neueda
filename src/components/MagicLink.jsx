@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
+
 const MagicLink = ({ href, children, className = '' }) => {
   return (
-    <a
-      href={href}
+    <Link
+      to={href}
       className={`
         relative
         inline-block
@@ -33,7 +35,7 @@ const MagicLink = ({ href, children, className = '' }) => {
       >
         ✨
       </span>
-    </a>
+    </Link>
   );
 };
 

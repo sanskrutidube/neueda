@@ -38,7 +38,7 @@ const CharacterList = () => {
         {characters.map((character) => (
           <li className="pl-2" key={character.id}>
             <span className="inline-block w-full pl-2 group">
-              <MagicLink href={`characters/id/${character.id}`}>
+              <MagicLink href={`id/${character.id}`}>
                 {character.name}
               </MagicLink>
             </span>
