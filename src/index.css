@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.magic-list li::before {
+  @apply content-['🪄'] mr-2;
+}
+
+.magical-ripple {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 0, 0.8) 0%,
+    rgba(255, 140, 0, 0.6) 25%,
+    rgba(138, 43, 226, 0.4) 50%,
+    rgba(75, 0, 130, 0.2) 75%,
+    rgba(0, 0, 255, 0) 100%
+  );
+  animation: ripple 1.5s cubic-bezier(0, 0.5, 0.5, 1) forwards;
+  width: 300vmax;
+  height: 300vmax;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
