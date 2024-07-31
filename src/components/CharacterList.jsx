@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getAllCharacters } from '../services/data';
 import MagicLink from './MagicLink';
+import { Link } from 'react-router-dom';
 
 const CharacterList = () => {
   const [characters, setCharacters] = useState([]);
@@ -44,9 +45,17 @@ const CharacterList = () => {
           </li>
         ))}
       </ul>
-      <div>
-        <MagicLink href="/characters/add">Add a new character</MagicLink>
-      </div>
+      <footer className="mt-8 flex justify-center">
+        <div className="inline-block">
+          <Link
+            to="/characters/add"
+            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Add a new character
+          </Link>
+        </div>
+      </footer>
+      <div></div>
     </>
   );
 };
