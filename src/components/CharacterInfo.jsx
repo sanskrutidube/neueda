@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { getCharacterById, updateCharacter } from '../services/data';
 import CharacterInformationCard from './CharacterInformationCard';
 import NotFound from './NotFound';
@@ -9,6 +9,8 @@ const CharacterInfo = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [character, setCharacter] = useState(null);
   const [error, setError] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const controller = new AbortController();
@@ -48,6 +50,7 @@ const CharacterInfo = () => {
 
   const saveCharacter = async (editedCharacter) => {
     await updateCharacter(editedCharacter);
+    navigate(0);
   };
 
   return (
