@@ -134,6 +134,17 @@ const CharacterInformationCard = ({ character, onSave }) => {
                   />
                 </div>
               </div>
+              <div className="mb-4">
+                <label className="font-bold">Image URL:</label>
+                <input
+                  type="url"
+                  id="imageurl"
+                  value={editedCharacter.imageurl}
+                  onChange={handleChange}
+                  className="w-full"
+                  name="imageurl"
+                />
+              </div>
               <div className="flex justify-end gap-2">
                 <button
                   type="button"
